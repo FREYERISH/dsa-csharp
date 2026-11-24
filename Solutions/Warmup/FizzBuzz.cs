@@ -14,7 +14,30 @@ public class FizzBuzz
 {
     public IList<string> Solve(int n)
     {
-        // TODO: write your solution here, then delete the line below.
-        throw new NotImplementedException();
+        List<string> result = new List<string>();
+
+        for(int i=1;i<= n; i++)
+        {
+            
+            if(i%3==0 && i % 5 == 0)
+            {
+                result.Add("FizzBuzz");
+            }
+            else if (i % 5 == 0)
+            {
+                result.Add("Buzz");
+            }
+            else if(i%3==0 )
+            {
+                result.Add("Fizz");
+            }
+            else
+            {
+                result.Add(i.ToString());
+            }
+        }
+
+        return  result;
+        
     }
 }
