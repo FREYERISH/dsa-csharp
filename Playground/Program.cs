@@ -54,3 +54,59 @@ foreach(int n in nums)
 // TODO: foreach n in nums
 //   if seen already contains n -> print "Duplicate: n"
 //   otherwise -> add n to seen
+
+
+// ===== 4. Stack<int> =====
+Stack<int> stack = new Stack<int>();
+int x = 1;
+while (x < 4)
+{
+    
+    stack.Push(x);
+    x++;
+}
+
+Console.WriteLine("Stack (LIFO):");
+while (stack.Count > 0)
+{
+    Console.WriteLine(stack.Peek());
+    stack.Pop();
+}
+
+
+// ===== 5. Queue<int> =====
+Queue<int> queue = new Queue<int>();
+
+int y = 1;
+while (y < 4)
+{
+    
+    queue.Enqueue(y);
+    y++;
+}
+
+Console.WriteLine("Queue (FIFO):");
+while (queue.Count > 0)
+{
+    Console.WriteLine(queue.Peek());
+    queue.Dequeue();
+}
+
+
+// ===== 6. PriorityQueue<string, int> =====
+PriorityQueue<string, int> tasks = new PriorityQueue<string, int>();
+
+// TODO: enqueue "Fix bug" with priority 1
+// TODO: enqueue "Write tests" with priority 3
+// TODO: enqueue "Code review" with priority 2
+
+tasks.Enqueue("Fix bug",1);
+tasks.Enqueue("Write tests",3);
+tasks.Enqueue("Code review",2);
+
+Console.WriteLine("PriorityQueue (lowest priority number first):");
+while (tasks.Count > 0)
+{
+    Console.WriteLine(tasks.Peek());
+    tasks.Dequeue();
+}
