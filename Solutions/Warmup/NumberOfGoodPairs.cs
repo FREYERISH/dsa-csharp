@@ -14,17 +14,23 @@ public class NumberOfGoodPairs
 {
     public int Solve(int[] nums)
     {
+        Dictionary<int, int> seen = new Dictionary<int, int>();
         int pairs = 0;
-        for (int i = 0; i < nums.Length; i++)
+
+        foreach (int n in nums)
         {
-            for (int j = i + 1; j < nums.Length; j++)
+
+            if (seen.ContainsKey(n))
             {
-                if (nums[i] == nums[j])
-                {
-                    pairs++;
-                }
+                pairs = pairs + seen[n];
+                seen[n] = seen[n] + 1;
+            }
+            else
+            {
+             seen[n] =1;   
             }
         }
+
         return pairs;
     }
 }
