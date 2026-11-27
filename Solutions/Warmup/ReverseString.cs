@@ -14,7 +14,19 @@ public class ReverseString
 {
     public void Solve(char[] s)
     {
-        // TODO: write your solution here, then delete the line below.
-        throw new NotImplementedException();
+        char temp;
+        int left = 0;
+        int right = s.Length-1;
+
+        while (left < right)
+        {
+            temp =  s[left];
+            s[left] = s[right];
+            s[right] =  temp;
+            left++;
+            right--;
+        }
+        
+        
     }
 }
