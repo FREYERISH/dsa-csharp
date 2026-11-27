@@ -10,5 +10,5 @@ Data structures and algorithms practice in C# (.NET 8), with xUnit tests.
 ## Progress
 | Topic | Problems |
 |---|---|
-| Warm-up | |
+| Warm-up | Running Sum, Fizz Buzz, Richest Customer Wealth, Number of Good Pairs |
 | Arrays & Hashing | |
