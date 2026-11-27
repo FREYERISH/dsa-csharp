@@ -14,7 +14,17 @@ public class NumberOfGoodPairs
 {
     public int Solve(int[] nums)
     {
-        // TODO: write your solution here, then delete the line below.
-        throw new NotImplementedException();
+        int pairs = 0;
+        for (int i = 0; i < nums.Length; i++)
+        {
+            for (int j = i + 1; j < nums.Length; j++)
+            {
+                if (nums[i] == nums[j])
+                {
+                    pairs++;
+                }
+            }
+        }
+        return pairs;
     }
 }
