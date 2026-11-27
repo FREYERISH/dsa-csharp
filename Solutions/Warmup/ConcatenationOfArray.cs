@@ -14,7 +14,22 @@ public class ConcatenationOfArray
 {
     public int[] Solve(int[] nums)
     {
-        // TODO: write your solution here, then delete the line below.
-        throw new NotImplementedException();
+        int  n = 2*nums.Length;
+        int[] ans = new int[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            if (i < nums.Length)
+            {
+                ans[i] = nums[i];
+            }
+            else
+            {
+                ans[i] = nums[i-nums.Length];
+            }
+        }
+
+        return ans;
+
     }
 }
