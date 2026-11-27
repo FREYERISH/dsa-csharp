@@ -14,8 +14,31 @@ namespace Solutions.Warmup;
 public class MergeSortedArray
 {
     public void Solve(int[] nums1, int m, int[] nums2, int n)
-    {
-        // TODO: write your solution here, then delete the line below.
-        throw new NotImplementedException();
+{
+    int i = m - 1;
+    int j = n - 1;
+    int k = m + n - 1;
+
+    while (j >= 0) {
+        // TODO:
+        // if i is still valid (i >= 0) AND nums1[i] > nums2[j]:
+        //     write nums1[i] at nums1[k], move i left
+        // otherwise:
+        //     write nums2[j] at nums1[k], move j left
+        // move k left (in both cases)
+        if(i>= 0 && nums1[i]> nums2[j]){
+                nums1[k] = nums1[i];
+                i--;
+                k--;
+            }
+            else
+            {
+                nums1[k] = nums2[j];
+                        j--;
+                        k--;
+        }
+
+
     }
+}
 }
