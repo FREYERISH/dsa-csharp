@@ -14,7 +14,20 @@ public class RichestCustomerWealth
 {
     public int Solve(int[][] accounts)
     {
-        // TODO: write your solution here, then delete the line below.
-        throw new NotImplementedException();
+        int count = 0;
+        int result = 0;
+        for (int i = 0; i < accounts.Length; i++)
+        {
+            for (int j = 0; j < accounts[i].Length; j++)
+            {
+                count = count + accounts[i][j];
+            }
+            if (result <= count)
+            {
+                result = count;
+            }
+            count = 0;
+        }
+        return result;
     }
 }
