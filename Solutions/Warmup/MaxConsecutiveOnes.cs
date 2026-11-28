@@ -14,7 +14,23 @@ public class MaxConsecutiveOnes
 {
     public int Solve(int[] nums)
     {
-        // TODO: write your solution here, then delete the line below.
-        throw new NotImplementedException();
+        int current = 0;
+        int  best = 0;
+        foreach(int n in nums)
+        {
+            if(n == 1)
+            {
+                current++;
+            }
+            else
+            {
+                current = 0;
+            }
+            if(current >= best)
+            {
+                best = current;
+            }
+        }
+        return best;
     }
 }
